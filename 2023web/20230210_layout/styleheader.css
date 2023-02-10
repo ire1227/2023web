@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/* init */
+*{margin: 0;padding: 0;}
+.clearfix:after{
+    content: "";display: block;clear: both;
+}
+li{list-style: none;}
+a:link,a:visited{text-decoration: none;color: #000;}
+
+/* header */
+#hd{
+    width: 1000px;
+    margin: 0 auto;
+    background-color: pink;
+}
+h1.test{
+    width: 100px;
+    background-color: yellow;
+    margin: 0 auto;
+    text-align: center;
+}
+h1.test a{
+    background-color: violet;
+    display: block;
+}
+.menu li{
+    float: left;
+    width: 20%;
+}
+.menu li a{
+    text-align: center;
+    display: block;
+    line-height: 50px;
+}
+.menu li a:hover{
+    background-color: aqua;
+}

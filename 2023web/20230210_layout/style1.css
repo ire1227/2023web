@@ -12,6 +12,7 @@ div.wrap{
     margin: 0 auto;
     background-color:skyblue
 }
+
 div.wrap > ul >li{
     background-color:pink;
     width: 20%;
