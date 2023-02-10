@@ -27,6 +27,7 @@ h1.test a{
 .menu li{
     float: left;
     width: 20%;
+    
 }
 .menu li a{
     text-align: center;
