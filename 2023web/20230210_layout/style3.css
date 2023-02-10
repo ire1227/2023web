@@ -30,7 +30,8 @@ a:link,a:visited{text-decoration: none;color: black;}
 .menu li{
     float: left;
     width: 20%;
-    border: 1px solid #000;
+   
+    ;
 }
 
 .menu li:hover{
