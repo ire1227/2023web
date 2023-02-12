@@ -1,0 +1,11 @@
+*{margin: 0;padding: 0;}
+.header{
+    margin: 0 auto;
+    background-color:violet;
+    width: 1000px;
+}
+.ul li{
+    text-align: center;
+    width: 20%;
+    background-color:aqua;
+}
