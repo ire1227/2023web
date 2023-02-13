@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        a:link,a:visited{text-decoration: none;color: #333;}
+        .clearfix::after{
+            content: "";display: block;clear: both;
+        }
+        li{list-style: none;}
+
+        .wrap{
+            width: 1000px;
+            background-color: aqua;
+        }
+        .wrap header a{
+            width: 100px;
+            height: 40px;
+            background-color: blue;
+            display: block;
+            margin: 0 auto;
+        }
+        .wrap ul li{
+            width: 20%;
+            background-color: violet;
+            float: left;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header><a href="logo">logo</a></header>
+        <ul class="clearfix">
+            <li><a href="menu">menu1</a></li>
+            <li><a href="menu">menu2</a></li>
+            <li><a href="menu">menu3</a></li>
+            <li><a href="menu">menu4</a></li>
+            <li><a href="menu">menu5</a></li>
+        </ul>
+    </div>
+</body>
+</html>
