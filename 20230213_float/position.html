@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        a:link,a:visited{text-decoration: none;color:#333;}
+        .clearfix:after{content: "";display: block;clear: both;}
+        li{list-style: none;}
+
+        .wrap{
+            width: 300px;height: 500px;
+            background-color: skyblue;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .wrap div{width: 100px;height: 100px;}
+        .box1{
+            /* width: 100px;
+            height: 100px; */
+            background-color: #f00;
+            position:absolute;
+            z-index: 3;
+            left: 50px;
+            top: 50px;
+        }
+        .box2{
+            /* width: 100px;
+            height: 100px; */
+            background-color: #0f0;
+            position:absolute;
+            /* bottom: 0;right: 0; */
+            z-index: 2;
+        }
+        .box3{
+            /* width: 100px;
+            height: 100px; */
+            background-color: blue;
+            position:absolute;
+            /* bottom: 0;right: 0; */
+            left: 20px;top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1">빨강</div>
+        <div class="box2">녹색</div>
+        <div class="box3">파랑</div>
+    </div>
+</body>
+</html>
