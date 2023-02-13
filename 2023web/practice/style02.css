@@ -34,5 +34,7 @@ header#hd{
     text-align: center;
 }
 .menu li a:hover{
-    
+    background-color: #00f;
+    color:#fff;
+    transition: 0.3s;
 }
