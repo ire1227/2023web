@@ -45,3 +45,7 @@ h1 img{display: block;}
     display: block;height: 44px;font-size: 16px;color: white;
     text-align: center;line-height: 44px;font-weight: bold;letter-spacing: -0.8px;
 }
+
+
+/* visual */
+.visual{background: #1B335F;}
