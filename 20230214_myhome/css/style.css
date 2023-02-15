@@ -140,16 +140,19 @@ h1 img{display: block;}
 #ft{
     background-color: #5E5E5E;width: 100%;height: 145px;
 }
+.footerTop{background-color: #4D4D4D;}
 #ft .topMenuWrap{
-    background-color: #4D4D4D;height: 43px;
+   height: 43px;
 }
-#ft .topMenu{
-   
-}
+#ft .topMenu li{float: left; }
 #ft .top a{
     display: block;
-    float: left;
     line-height: 43px;
     padding: 0 15px;
+    position: relative;
+}
+#ft .top a:after{
+    content: "";display: block;width: 10px;height: 10px;color: #717171;
+    position: absolute;left: -2px;top: 11px;
 }
 
