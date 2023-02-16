@@ -142,17 +142,29 @@ h1 img{display: block;}
 }
 .footerTop{background-color: #4D4D4D;}
 #ft .topMenuWrap{
-   height: 43px;
+   /* height: 43px; */
 }
-#ft .topMenu li{float: left; }
-#ft .top a{
+#ft .topMenu li{
+    float: left;
+ }
+
+/* #ft .topMenu li a{
+    display: block;line-height: 43px;position: relative;
+    padding: 0 15px;
+}
+#ft .topMenu li a:after{
+    content:"";display: block;width: 1px;height: 10px;background: #fff;
+    position: absolute;top: 50%;right: 0;
+    transform: translateY(-50%);
+} */
+#ft .topMenu li a{
     display: block;
     line-height: 43px;
     padding: 0 15px;
     position: relative;
 }
-#ft .top a:after{
-    content: "";display: block;width: 10px;height: 10px;color: #717171;
+#ft .topMenu li a:after{
+    content: "";display: block;width: 10px;height: 10px;background: #000;
     position: absolute;left: -2px;top: 11px;
 }
 
