@@ -142,7 +142,7 @@ h1 img{display: block;}
 }
 .footerTop{background-color: #4D4D4D;}
 #ft .topMenuWrap{
-   /* height: 43px; */
+   height: 43px;
 }
 #ft .topMenu li{
     float: left;
@@ -164,7 +164,7 @@ h1 img{display: block;}
     position: relative;
 }
 #ft .topMenu li a:after{
-    content: "";display: block;width: 10px;height: 10px;background: #000;
+    content: "";display: block;width: 2px;height: 10px;background: #000;
     position: absolute;left: -2px;top: 11px;
 }
 
