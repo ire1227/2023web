@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span.name{color: aqua;font-weight: bold;}
+    </style>
+    <script>
+        document.write("test");
+        console.log("console");
+        // alert("hi");
+        
+        let first = "유";
+        const name = "이레";
+        // const는 값을 변경하지 않을 때 사용.변하지 않는 재원(수치나 크기)에 사용
+        // let은 다른 종류를 담는거 가능
+        first = "서"; 
+        // let first ="서" 재선언하는거 이건 안됨
+
+        document.write("나는 <span class='name'>" + first + name + "</span> 입니다<br>")
+
+        let num = 1;
+        document.write(++num + "<br>")
+        document.write(++num + "<br>")
+        document.write(num + "<br>")
+        // 전위연산자를 쓰면 계산해서 나오고 후위연산자를 쓰면 그 다음에 선언해줄때 계산해서 나옴
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
