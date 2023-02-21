@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #F00;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" onclick="location.href='location01.html'">
+
+    </div>
+    <div id="day">일요일</div>
+    <div id="day1">월요일</div>
+
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js -->
+    <script>
+        // const week = new Date().getDay();
+        // console.log(week)
+
+        // let day ="";
+
+        // switch(week){
+        //     case 0:
+        //         day = "일";
+        //         break;
+        //     case 1:
+        //         day = "월";
+        //         break;
+        //     case 2:
+        //         day = "화";
+        //         break;
+        //     case 3:
+        //         day = "수";
+        //         break;
+        //     case 4:
+        //         day = "목";
+        //         break;
+        // }
+
+        // 지역변수는 블럭 안에서만 사용
+        // 전역변수는 블럭 외 내 모두사용
+
+        // document.write("오늘은 " + day + "요일 입니다.")
+        // console.log(document.getElementById("day").innerHTML);
+        // = "오늘은 " + day + "요일 입니다.";
+        // $("#day").html("오늘 역시 "+ day + "요일 입니다")
+
+        // const str = new String("han")
+        // const str1 = "ddd"
+        // han week = new han() 자바에서는 이런식으로 씀. 만들어서...
+        // week.
+        // console.log(document.getElementById("day1").innerHTML);
+        // document.getElementById("day").innerHTML = "오늘은 " + day + "요일 입니다.";
+
+        var text;
+        var week = new Date().getDay();
+        switch(week){
+            case 1:
+            case 2:
+                text="HTML5";
+                break;
+            case 3:
+            case 4:
+                text="자바스크립트";
+                break;
+            case 5:
+            case 6:
+                text="영어";
+                break;
+            case 0:
+            default:
+                text="수영";
+        
+        }
+        document.write("오늘은 <b>" + text + "</b> 학습하는 날입니다. <p/>");
+        // document.getElementById("week").innerHTML = "오늘은 " + text + "학습하는 날입니다.";
+        
+
+        
+    </script>
+</body>
+</html>

@@ -83,7 +83,7 @@ h1 img{display: block;}
     float: left;
     color:white;
     text-align: center;
-    padding: 20px  0;
+    padding: 20px 10px;
 }
 .bWrap li img{
     display: block;margin: 0 auto;
