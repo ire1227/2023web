@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        li{list-style: none;}
+        .clearfix:after{
+            content:"";display: block;clear: both;
+        }
+        body{background: skyblue;}
+        .wrap{
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .bx-wrapper {
+            -moz-box-shadow: 0 0 0 #ccc;
+            -webkit-box-shadow: 0 0 0 #ccc;
+            box-shadow: 0 0 0 #ccc;
+            border: 0 none;
+            background: #fff;
+            margin-bottom: 0;
+        }
+        .slide_pager{
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background: rgba(255,0,0,0.3);
+            height: 40px;
+        }
+        .slide_pager a{
+            float: left;
+            height: 40px;
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .slide_pager a.active{background: violet;}
+        .visual{height: 200px;background: blue;}
+        .txtWrap{
+            position: absolute;
+            right: 10px ;top: 30px;
+            width: 400px;
+            background: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="slide1">
+            <li>
+                <img src="../images/main_slider01.jpg" alt="">
+                <div class="txtWrap">
+                    <h3>test</h3>
+                    <p>test</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/main_slider01.jpg" alt="">
+                <div class="txtWrap">
+                    <h3>test</h3>
+                    <p>test</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/main_slider01.jpg" alt="">
+                <div class="txtWrap">
+                    <h3>test</h3>
+                    <p>test</p>
+                </div>
+            </li>
+            <li>
+                <img src="../images/main_slider01.jpg" alt="">
+                <div class="txtWrap">
+                    <h3>test</h3>
+                    <p>test</p>
+                </div>
+            </li>
+        </ul>
+        <div class="slide_pager clearfix">
+            <a data-slide-index="0">tab1</a>
+            <a data-slide-index="1">tab2</a>
+            <a data-slide-index="2">tab3</a>
+            <a data-slide-index="3">tab4</a>
+        </div>
+        <!-- 페이저 커스텀 -->
+    </div>
+    <div class="visual">
+        test
+    </div>
+
+
+    <script src="js/jquery.min.js"></script> 
+    <!-- jquery는 자바스크립트를 편하게 만들어주는거 -->
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        // $("선택자").메소드() 
+        // $("선택자").속성
+        $(".slide1").bxSlider({
+            auto:true, //자동으로 넘어가게
+            controls:false, //양 옆 화살표없애기
+            // pager:false, //밑에 점점점 없애기
+            mode:'vertical', //위쪽으로 슬라이드
+            pagerCustom:'.slide_pager', //pager를 커스텀해서 쓰는거
+        })
+    </script>
+</body>
+</html>

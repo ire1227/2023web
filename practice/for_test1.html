@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상어가족</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        li{list-style: none;}
+        .clearfix:after{content: "";display: block;clear: both;}
+        a:link,a:visited{text-decoration: none; color: #333;}
+
+        .wrap{width: 1000px;margin: 0 auto;}
+        .gnb li{
+            float: left;
+            width: calc( 100% / 5 );
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gnb li a{
+            display: flex;height: 50px;
+            justify-content: center;align-items: center;
+        }
+        .gnb li:hover{
+            background: pink;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header class="wrap">
+        <nav>
+            <ul class="gnb clearfix"></ul>
+        </nav>
+    </header>
+    <script>
+        const gMenu = [
+            "아기상어",
+            "엄마상어",
+            "아빠상어",
+            "할머니상어",
+            "할아버지상어",
+        ]
+        const gLink = [
+            "https://www.pinkfong.com/ko/",
+            "https://www.pinkfong.com/assets/img/new/main/shark_family.svg",
+            "https://www.pinkfong.com/assets/img/new/partnership/partnership_center.png",
+            "https://www.pinkfong.com/assets/img/new/brand_logo/en/pinkfong_logo_xs.svg",
+            "https://www.pinkfong.com/assets/img/new/main/ocean_object_mobile.png",
+        ]
+
+        let menu = "";
+        for(let i=0;i<gMenu.length;i++){
+            menu += "<li>";
+            menu += "<a href='" + gLink[i] + "'>"+gMenu[i]+"</a>";
+            menu += "</li>";
+        }
+
+        console.log(menu);
+        document.getElementsByClassName("gnb")[0].innerHTML = menu;
+    </script>
+</body>
+</html>

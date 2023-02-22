@@ -6,4 +6,4 @@ a:link,a:visited{text-decoration: none;color: #333;}
     content: "";display: block;clear: both;
 }
 .slide img{width: 100%;}
-.Wrap{width: 1280px;margin: 0 auto;}
+.Wrap{width: 1280px;min-width:1280px;margin: 0 auto;}
