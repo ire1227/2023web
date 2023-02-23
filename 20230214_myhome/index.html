@@ -165,5 +165,52 @@
     <footer id="ft">
         
     </footer>
+    <div class="img"></div>
+    <script>
+        const img = [
+            "img01.jpg",
+            "img02.jpg",
+            "img03.jpg"
+        ]
+        const txt = [
+            "회사개요",
+            "회사개요",
+            "회사개요"
+        ]
+        const content = [
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        ]
+        const obj = [
+            {
+                img:'img01.jpg',
+                title:"회사개요",
+                content:"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            },
+            {
+                img:'img02.jpg',
+                title:"회사개요",
+                content:"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            },
+            {
+                img:'img03.jpg',
+                title:"회사개요",
+                content:"Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            },
+        ]
+
+        let imgView = "";
+        for(let i=0;i<img.length;i++){
+            imgView += "<div class = 'imgView'>";
+            imgView += "<img src='../../images/" + img[i] + "'>";
+            imgView += "<h3>" + txt[i] + "</h3>";
+            imgView += "<p>" + content[i] + "</p>";
+            imgView += "</div>"
+        }
+        console.log(imgView)
+        document.getElementsByClassName("img")[0].innerHTML = imgView
+    </script>
+
 </body>
 </html>
