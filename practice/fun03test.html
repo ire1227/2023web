@@ -13,6 +13,13 @@
             background: tomato;
             position: relative;
             margin: 0 auto;
+            overflow: hidden;
+            border-radius: 150px;
+        }
+        .wrap img{
+            width: 100px;
+            display: block;
+            margin: 0 auto;
         }
         .box1{
             width: 100px;
@@ -23,6 +30,7 @@
             align-items: center;
             position: absolute;
             right: 0;top: 0;
+            border-radius: 50%;
         }
         .box2{
             width: 500px;
@@ -34,13 +42,15 @@
             align-items: center;
             left: -500px; top: 0;
             transition: 0.3s;
+            border-radius: 50px;
         }
     </style>
 </head>
 <body>
     <div class="wrap">
+        <img src="img/뽀로로.jpg" alt="">
         <div class="box1" onmouseover="boxOver()" onmouseout="boxOut()"></div>
-        <div class="box2"></div>
+        <div class="box2">안녕 뽀로로!</div>
     </div>
 
 
@@ -50,7 +60,7 @@
     const box2Elem = document.getElementsByClassName("box2")[0];
 
     box1Elem.onmouseover = function(){
-        box2Elem.style.background = "blue";
+        box2Elem.style.background = "white";
         box2Elem.style.left = "0";
     }
     box1Elem.onmouseout = function(){
@@ -67,7 +77,6 @@
     //     box2Elem.style.background = "aqua";
     //     box2Elem.style.left = "-500px";
     // }
-
 
 </script>
 </body>
