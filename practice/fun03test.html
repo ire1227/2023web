@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        .wrap{
+            width: 1000px;
+            height: 300px;
+            background: tomato;
+            position: relative;
+            margin: 0 auto;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;top: 0;
+        }
+        .box2{
+            width: 500px;
+            height: 100px;
+            background: pink;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            left: -500px; top: 0;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1" onmouseover="boxOver()" onmouseout="boxOut()"></div>
+        <div class="box2"></div>
+    </div>
+
+
+
+<script>
+    const box1Elem = document.getElementsByClassName("box1")[0];
+    const box2Elem = document.getElementsByClassName("box2")[0];
+
+    box1Elem.onmouseover = function(){
+        box2Elem.style.background = "blue";
+        box2Elem.style.left = "0";
+    }
+    box1Elem.onmouseout = function(){
+        box2Elem.style.background = "aqua";
+        box2Elem.style.left = "-500px";
+    }
+    //left값은 왜 변화 없지? position 넣어주기 꼭
+
+    // function boxOver(){
+    //     box2Elem.style.background = "blue";
+    //     box2Elem.style.left = "0";
+    // }
+    // function boxOut(){
+    //     box2Elem.style.background = "aqua";
+    //     box2Elem.style.left = "-500px";
+    // }
+
+
+</script>
+</body>
+</html>
