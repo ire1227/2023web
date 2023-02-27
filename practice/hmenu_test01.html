@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{height: 100%;}
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{
+            display: flex;justify-content: center;align-items: center;
+        }
+        .menuWrap{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .line{
+            width: 20px;height: 3px;
+            background: pink;
+            border-radius: 2px;
+            position: absolute;
+            transition: 0.3s;
+        }
+        .line.line1{transform: translateY(-10px);}
+        .line.line2{opacity: 1;}
+        .line.line3{transform: translateY(10px);}
+
+        .menuWrap.click .line.line1{transform: translateY(0px) rotate(45deg);}
+        .menuWrap.click .line.line2{opacity: 1;}
+        .menuWrap.click .line.line3{transform: translateY(0px) rotate(-45deg);}
+
+        .buttonWrap{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .button{
+            width: 30px;height: 3px;
+            background: blueviolet;
+            border-radius: 2px;
+            position: absolute;
+            transition: 0.3s;
+        }
+        .button.button1{transform: translateY(-10px);}
+        .button.button2{opacity: 1;}
+        .button.button3{transform: translateY(10px);}
+
+        .buttonWrap.click .button.button1{transform: translateY(-10px) rotate(45deg);}
+        .buttonWrap.click .button.button2{opacity: 0;}
+        .buttonWrap.click .button.button3{transform: translateY(10px) rotate(-45deg);}
+
+
+        /* <!-- 방법2 hmenu 문서에서한것 --> */
+        .menu1Wrap{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            position: relative;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .menu1Wrap .line1{
+            width: 30px;height: 3px;
+            background-color: blue;
+            border-radius: 2px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            transition: 0.3s;
+        }
+        .click1 .line1{
+            transform: translate(-50%,-50%);
+        }
+        .menu1Wrap .line1{
+            transform: translate(-50%, calc( -50% -10px ));
+        }
+        .menu1Wrap .line3{
+            transform: translate(-50%, calc( -50% +10px ));
+        }
+        .menu1Wrap.click1 .line1{transform: translate(-50%,-50%) rotate(45deg);}
+        .menu1Wrap.click1 .line2{opacity: 0;}
+        .menu1Wrap.click1 .line3{transform: translate(-50%,-50%) rotate(-45deg);}
+
+    </style>
+</head>
+<body>
+    <!-- 방법 1 hmenu1 문서에서한것 -->
+    <div class="menuWrap" onclick="mclick()">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+    
+    <div class="buttonWrap" onclick="bClick()">
+        <div class="button button1"></div>
+        <div class="button button2"></div>
+        <div class="button button3"></div>
+    </div>
+
+    <!-- 방법2 hmenu 문서에서한것 -->
+    <div class="menu1Wrap click1" onmouseover="mClick1()" onmouseout="moClick1()">
+        <div class="line1 line1"></div>
+        <div class="line1 line2"></div>
+        <div class="line1 line3"></div>
+    </div>
+
+
+
+    <script>
+        //<!-- 방법 1 hmenu1 문서에서한것 -->
+        const mWrapElem = document.querySelector(".menuWrap")
+        function mclick(){
+            mWrapElem.classList.toggle("click")
+        }
+
+
+        const bWrapElem = document.querySelector(".buttonWrap")
+        function bClick(){
+            bWrapElem.classList.toggle("click")
+        }
+    </script>
+
+    <!-- 방법 2 hmenu1 문서에서한것 -->
+    <script>
+        const menu1Wrap = document.querySelector(".menu1Wrap");
+
+        function mClick1(){
+            console.log("click1")
+            menu1Wrap.classList.toggle("click1")
+        }
+        function moClick1(){
+            console.log("click1")
+            menu1Wrap.classList.toggle("click1")
+        }
+    </script>
+       
+
+</body>
+</html>

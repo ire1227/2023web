@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Travel list</h1>
+    <div class="city1">1</div>
+    <div class="city1">2</div>
+    <div class="city1">3</div>
+    <div class="city3">4</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+    <div class="city4">5</div>
+
+    <script>
+        const cityText = document.getElementsByClassName("city1")[0];
+        const city = [
+            "포르투갈",
+            "영국",
+            "크로아티아",
+            "헝가리"
+        ]
+        const citySize = city.length;
+
+        function printCity(){
+
+            let textSum = "";
+            for(let i = 0;i<citySize;i++){
+                textSum += city[i]+"<br>"
+            }
+            cityText.innerHTML = textSum;
+        }
+        printCity();
+
+
+        const city1Elem = document.querySelectorAll("div.city1")
+        const city1Size = city1Elem.length;
+        for(let i=0;i<city1Size;i++){
+            city1Elem[i].style.background = "pink"
+        }
+
+        const city4Elem = document.querySelectorAll("div.city4")
+        const city4Size = city4Elem.length;
+        for(let i=0;i<city4Elem.length;i++){
+            city4Elem[i].style.background = "violet"
+        }
+    </script>
+</body>
+</html>
