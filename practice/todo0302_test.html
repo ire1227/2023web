@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윙윙윙</title>
+    <style>
+        html,body{height: 100%;}
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        a:link,a:visited{text-decoration: none; color: #333;}
+        li{list-style: none}
+
+        .inpWrap{
+            width: 300px;
+            margin: 0 auto;
+            background: orange;
+        }
+        .listView{
+            width: 300px;
+            margin: 0 auto;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="inpWrap">
+        <input type="text" class="inp" value="" placeholder="윙윙윙">
+        <!-- <input> 태그의 value 속성은 <input> 요소의 초깃값(value)을 명시합니다. -->
+        <button class="btn1">입력</button>
+    </div>
+    <div class="listView">
+
+    </div>
+
+    <script>
+        const inpElem = document.querySelector(".inp");
+        const btnElem = document.querySelector(".btn1");
+        const listElem = document.querySelector(".listView");
+
+        const listData = [
+            "윙윙윙윙",
+            "고추잠자리",
+            "이리저리놀리며",
+            "윙윙윙"
+        ]
+        btnElem.addEventListener("click",function(){
+            if(inpElem.value == ""){
+                alert("윙윙윙 가사를 입력하세요");
+                inpElem.focus()
+            }
+            else{
+                listData.push(inpElem.value);
+                viewData();
+                inpElem.value = "";
+            }
+        })
+
+        function viewData(){
+            let listTitle = "<ul>";
+            for(let i=0;i<listData.length;i++){
+                listTitle += "<li>"+listData[i]+"</li>";
+            }
+            listTitle += "</ul>";
+            console.log(listTitle);
+            listElem.innerHTML = listTitle
+        }
+        viewData();
+    </script>
+</body>
+</html>
