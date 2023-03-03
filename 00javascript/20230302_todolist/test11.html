@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{list-style: none;}
+    </style>
+</head>
+<body>
+    <div class="inpWrap">
+        <input type="text" class="inp" value="" placeholder="오늘의 할일은...">
+        <button class="btn1">입력</button>
+    </div>
+    <div class="listView">
+
+    </div>
+
+    <script>
+        const inpElem = document.querySelector(".inp")
+        const btn1Elem = document.querySelector(".btn1")
+        const listElem = document.querySelector(".listView")
+
+        const dataSpace = [
+
+        ]
+        // let candy = ""
+        //     candy = candy + "<ul>" 
+            
+        //         let candy = ""
+        //         candy = candy + "<u"
+        //         candy = candy + "l>"
+
+        function haha(){
+            let huhu = "<ul>"
+                for(i=0;i<dataSpace.length;i++){
+                    huhu = huhu + "<li>" + dataSpace[i] + "</li>"
+                }
+                huhu = huhu + "</ul>"
+            listElem.innerHTML = huhu
+        }
+        haha();
+
+      
+        btn1Elem.addEventListener("click",function(){
+            if(inpElem.value == ""){
+                alert("웅?");
+                inpElem.focus();
+            }else{
+                dataSpace.push(inpElem.value);
+                haha();
+                inpElem.value = "";
+                inpElem.focus();
+            }
+        })
+
+        
+
+        
+
+        // 기능만들어주기, 행동하는 애한테 이벤트 추가
+       
+       
+       
+       
+
+
+
+
+       
+       
+       
+        // btn1Elem.addEventListener("click")
+        
+
+
+
+
+        
+    </script>
+
+</body>
+</html>
