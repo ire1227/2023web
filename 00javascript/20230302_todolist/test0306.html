@@ -10,19 +10,18 @@
     <style>
         .btn_modi{
             display: none;
-            /* opacity: 0; */
         }
 
         .inpWrap,.listView{
             width: 300px;margin: 0 auto;
         }
-        .inpWrap{background: skyblue;}
-        .listView{background: plum;}
+        .inpWrap{background: aqua;}
+        .listView{background: pink;}
         .listView ul li{
             display: flex;
             padding: 5px 0;
         }
-        .listView ul li .list{display: flex;align-items: center;padding-left: 10px;}
+        .listView ul li .list{display: flex;align-items: center;}
         .listView ul li .icon{
             margin-left: auto; /* 아이템이 두개일때 양옆으로 벌어짐 */
             background: #000;
@@ -31,15 +30,21 @@
             font-size: 12px;
             display: flex;
             gap: 10px;
-       
+
         }
-       
+        a:link,a:visited{
+            color: grey;
+        }
+    
     </style>
+
+
 </head>
 <body>
-    <!-- <i class="fa-solid fa-trash-can"></i>
-    <i class="fa-sharp fa-solid fa-hammer"></i>
-    <i class="fa-solid fa-square-check"></i> -->
+    <!-- <i class="fa-regular fa-trash-can"></i>
+    <i class="fa-solid fa-eraser"></i>
+    <i class="fa-solid fa-heart-circle-check"></i> -->
+    <!-- https://fontawesome.com/사이트에서 맘에드는 아이콘 링크복사하고 https://cdnjs.com/에서 css링크 선언해주고 쓰기 -->
 
     <div class="inpWrap">
         <input type="text" class="inp">
@@ -58,12 +63,12 @@
         const listElem = document.querySelector(".listView ul");
 
         let listData = [
-            "자바스크립트1",
-            "자바스크립트2",
-            "자바스크립트3",
+            "안녕하세요",
+            "반가워요",
+            "잘있어요",
+            "다시만나요",
         ];
-     
-        // $(".btn_input").click(function(){}) jQuery에서는 이렇게 씀
+        
         btnIpElem.addEventListener("click",function(){
             
             if(inpElem.value != ""){
@@ -78,28 +83,27 @@
             console.log(listData)
         })
 
+
         function viewData(){
-            listData = []
-            for(let i=0;i<localStorage.length;i++){
+            listData = [];
+            for(i=0;i<localStorage.length;i++){
                 listData.push(localStorage.key(i));
             }
-
             console.log(listData)
             let viewList = "";
             listData.forEach(function(item,index){
                 viewList += `<li>
                                 <div class="list">${item}</div>
                                 <div class='icon'>
-                                    <a href="#" onclick="itemDel('${item}')"><i class="fa-solid fa-trash-can"></i></a>
-                                    <a href="#"><i class="fa-sharp fa-solid fa-hammer"></i></a>
-                                    <a href="#"><i class="fa-solid fa-square-check"></i></a>
+                                    <a href="#" onclick="itemDel('${item}')"><i class="fa-regular fa-trash-can"></i></a>
+                                    <a href="#"><i class="fa-solid fa-eraser"></i></a>
+                                    <a href="#"><i class="fa-solid fa-heart-circle-check"></i></a>
                                 </div>
                             </li>`
-            })//forEach문 이해가 안됐음
-           
+            })
             listElem.innerHTML = viewList
         }
-        viewData()
+        viewData();
 
         function itemDel(item){
             console.log(item)
@@ -112,6 +116,5 @@
             viewData()
         }
     </script>
-
 </body>
 </html>
