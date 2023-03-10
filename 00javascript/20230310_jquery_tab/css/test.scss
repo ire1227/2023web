@@ -1,0 +1,10 @@
+$width:400px;
+
+.tab{
+    width: $width;
+    height: 40px;
+    ul{
+        display: flex;
+        height: 100%;
+    }
+}
