@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Jeju</title>
+    <link rel="stylesheet" href="jejustyle.css">
+    <!-- <link rel="stylesheet" href="css/jquery.bxslider.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".slide").bxSlider({
+                auto: true
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- header -->
+        <div id="hd">
+            <h1><a href="#">Dream Jeju</a></h1>
+            <nav class="hMenu">
+                <ul>
+                    <li><a href="#">단체 여행</a></li>
+                    <li><a href="#">맟춤 여행</a></li>
+                    <li><a href="#">갤러리</a></li>
+                    <li><a href="#">문의하기</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <!-- swiper -->
+        <div class="swiperWrap">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="jejuimages/slide02.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="jejuimages/slide01.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="jejuimages/slide03.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+
+        <!-- section -->
+        <div class="section clearfix">
+            <div class="section1">
+                <div class="tabMenu">
+                    <ul>
+                        <li>공지사항</li>
+                        <li>갤러리</li>
+                    </ul>
+                </div>
+                <div class="tabWrap">
+                    <div>
+                        <ul>
+                            <li>사무실을 이전했습니다</li>
+                            <li>[참가 모집]카약 체험에 초대합니다.</li>
+                            <li>[참가 모집]여름 방학 기간,오름 체험단을 모집합니다.</li>
+                            <li>겨울, 추천 여행지</li>
+                            <li>가을, 추천 여행지</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><img src="jejuimages/유니곰.jpg" alt=""></li>
+                            <li><img src="jejuimages/니니.jpg" alt=""></li>
+                            <li><img src="jejuimages/유니.jpg" alt=""></li>
+                            <li><img src="jejuimages/유니곰.jpg" alt=""></li>
+                            <li><img src="jejuimages/니니.jpg" alt=""></li>
+                            <li><img src="jejuimages/유니.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>   
+            </div>
+
+            <div class="section2">
+                <div class="sectionImage">
+                    <ul class="clearfix">
+                        <a href="#">
+                            <img src="jejuimages/뽀로로.jpg" alt="">
+                            <p>평화기행</p>
+                        </a>
+                        <a href="#">
+                            <img src="jejuimages/루피.jpg" alt="">
+                            <p>힐링 워크샵</p>
+                        </a>
+                        <a href="#">
+                            <img src="jejuimages/크롱.jpg" alt="">
+                            <p>문의하기</p>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="ft clearfix">
+            <div class="ftWrap">
+                <div class="ftTop">
+                    <ul class="clearfix">
+                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">여행약관</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                    </ul>
+                </div>
+                <div class="ftBottom">
+                    <p>제주특별자치도 ***동 ***로 *** (대표전화) 123-456-7890</p>
+                </div>
+            </div>
+
+            <div class="ftMenu">
+                <ul class="clearfix">
+                    <li><a href="#"><img src="jejuimages/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="jejuimages/youtube-logo-7123.png" alt=""></a></li>
+                    <li><a href="#"><img src="jejuimages/instagram.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+        $(".tabMenu li").click(function(){
+            let i = $(this).index()
+            $(".tabMenu li").removeClass("active")
+            $(".tabMenu li").eq(i).addClass("active")
+
+            $(".tabWrap div").hide()
+            $(".tabWrap div").eq(i).show()
+        })
+    </script>
+</body>
+
+</html>
