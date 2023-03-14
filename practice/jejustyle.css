@@ -161,11 +161,21 @@ a:link,a:visited{
   }
   .ftTop{
     margin-bottom: 10px;
+    position: relative;
   }
   .ftWrap li{
     float: left;
     width: 150px;
   }
+  .ftTop ul li a:after{
+    content: "";
+    width: 2px;
+    height: 14px;
+    background: #000;
+    position: absolute;
+    left: 80px;top: 5px;
+  }
+  /* 왜 하나만 나오징? */
 
   .ftMenu{
     float: right;
@@ -182,6 +192,7 @@ a:link,a:visited{
   /* .ftMenu  li img a:last-child{
     margin-right: 0;
   } */
+
 
 
 
